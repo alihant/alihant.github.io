@@ -1,53 +1,59 @@
+# Welcome to Nubia Jekyll Theme!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely need to edit after that.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'jekyll serve'. If you change this file, please restart the server process.
 
+theme_version: 1.0.4
 
-# Site Settings
-title: 						"Skarpi"
-email: 						"me@skarpi.me"
-description: 				""
-baseurl: 					""
-url: 						"http://skarpi.me"
-logourl: 					"/assets/img/bloglogo.jpg"		
-fa-logo: 					"fa-bookmark-o"
-paginate: 					5
+# Site settings
+title:              Nubia
+logo:               # Logo image URL
+description:        Thoughts, Stories and Ideas
+baseurl:            '' # The subpath of your site, e.g. /blog
+url:                'https://nubia-jekyll.netlify.com/' # The base hostname & protocol for your site
+twitter:            https://twitter.com/aspirethemes
+facebook:           https://www.facebook.com/aspirethemes
+instagram:          https://www.instagram.com/aspirethemes
 
-
-# Author Settings
-author_name: 				"Skarpi"
-author_url: 				"http://skarpi.me"
-author_bio: 				"----------------"
-author_email: 				"me@skarpi.me"
-author_image: 				"/assets/img/authorimage.jpg"
-
-
-# Social Settings
-twitter_url: 				"http://twitter.com"
-facebook_url: 				"http://facebook.com"
-github_url:  				"http://github.com"
-youtube_url:  				"http://youtube.com"
-dribbble_url:  				"http://dribbble.com"
-googleplus_url: 			"http://google.com/plus"
-instagram_url:  			"http://instagram.com"
-pinterest_url:  			"http://pinterest.com"
-linkedin_url:  				"http://linkedin.com"
-
-
-# Theme Settings
-theme_disqus_shortname: 	"sk4rpi"
-theme_google_comments: 		false
-theme_analytics_id: 		"UA-28282324-1"
-theme_analytics_domain: 	"ecko.me"
-theme_reading_time: 		true
-theme_autoload_comments: 	false
-theme_always_show_nav: 		false
-
-
-# SASS Settings
-# DO NOT MODIFY
+markdown:  kramdown
+permalink: pretty
+paginate:  11
 sass:
- sass_dir: "assets/css/"
- style: :compressed
+  style: compressed
 
+gems:
+  - jekyll-paginate
+  - jekyll/tagging
 
-# Build Settings
-markdown: 					kramdown
-permalink: 					pretty
+include:
+  - _pages
+
+exclude:
+  - vendor
+  - Gemfile
+  - Gemfile.lock
+
+# Tags
+tag_page_dir:         tag
+tag_page_layout:      tag_page
+tag_permalink_style:  pretty
+
+# Pages path
+defaults:
+  - scope:
+      path: '_pages'
+    values:
+      permalink: /:basename:output_ext
+
+# Authors
+authors:
+  ahmad:
+    name:     Ahmad Ajmi
+    bio:      Author & developer of Aspire Themes. Minimalist. I love creating clean and minimal websites.Technical writer at SitePoint.
+    gravatar: https://s.gravatar.com/avatar/f83141edd9e6339e678648596a403fd5?s=150
+    email:    info@aspirethemes.com
+    website:  http://aspirethemes.com
+    github:   https://github.com/aspirethemes
+    twitter:  https://twitter.com/aspirethemes
